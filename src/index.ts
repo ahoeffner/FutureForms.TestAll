@@ -19,4 +19,6 @@
   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-import * as core from 'futureforms';
+import { FormsModule } from 'futureforms';
+
+FormsModule.initialize();
