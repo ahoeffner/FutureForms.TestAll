@@ -19,6 +19,20 @@
   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-import { Application } from "./Application";
+import { Tag } from 'futureforms';
+import { Parser } from 'futureforms';
 
-Application.initialize();
+
+export class CustomInput extends Tag
+{
+	public identifier:string = "custom-input";
+
+
+   // Shows recursive parsing
+   public replace(_clazz:any, element:HTMLElement, _attr?:string) : HTMLElement
+   {
+      let input:HTMLInputElement = document.createElement("input");
+      Parser.copyAllAttributes(element,input);
+      return(input);
+   }
+}

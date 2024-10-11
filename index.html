@@ -1,6 +1,6 @@
 <html>
    <body>
-      <form>
+      <form component="Form">
          <table>
             <thead>
                <tr>
@@ -14,8 +14,8 @@
                   <!--
                   <td class="indicator"><span from="CountryDS" row="$row" type="row-indicator"></span></td>
                   -->
-                  <td><input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
-                  <td><input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
+                  <td><custom-input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
+                  <td><custom-input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
                </tr>
             </tbody>
          </table>
