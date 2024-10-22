@@ -1,25 +1,34 @@
 <html>
    <body>
-      <form component="Form">
-         <table>
-            <thead>
-               <tr>
-                  <!--<th></th>-->
-                  <th>Code</th>
-                  <th>Country</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr class="row" foreach="row in 0..4">
-                  <!--
-                  <td class="indicator"><span from="CountryDS" row="$row" type="row-indicator"></span></td>
-                  -->
-                  <td><custom-input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
-                  <td><custom-input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
-               </tr>
-            </tbody>
-         </table>
-      </form>
+		<div component="Window">
+			<form component="Test" style="border: solid 2px black;">
+				<button>Test</button>
+				<table>
+					<thead>
+						<tr>
+							<!--<th></th>-->
+							<th>Code</th>
+							<th>Country</th>
+							<th>Check</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="row" foreach="row in 0..4">
+							<!--
+							<td class="indicator"><span from="CountryDS" row="$row" type="row-indicator"></span></td>
+							-->
+							<td><custom-input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
+							<td><custom-input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
+							<td><input type="checkbox" name="check" from="CountryDS" row="$row" value="X" advquery="false"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+
+		<div>
+			<input>
+		</div>
 
       <script src="app.js"></script>
    </body>

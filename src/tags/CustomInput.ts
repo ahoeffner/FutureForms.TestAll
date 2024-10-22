@@ -20,7 +20,6 @@
 */
 
 import { Tag } from 'futureforms';
-import { Parser } from 'futureforms';
 
 
 export class CustomInput extends Tag
@@ -29,10 +28,20 @@ export class CustomInput extends Tag
 
 
    // Shows recursive parsing
-   public replace(_clazz:any, element:HTMLElement, _attr?:string) : HTMLElement
+   public replace(element:HTMLElement, _attr?:string) : HTMLElement
    {
       let input:HTMLInputElement = document.createElement("input");
-      Parser.copyAllAttributes(element,input);
+      this.copyAllAttributes(element,input);
       return(input);
    }
+
+
+   public copyAllAttributes(fr:Element,to:Element) : void
+	{
+		if (fr == null || to == null) return;
+		let attrnames:string[] = fr.getAttributeNames();
+
+		for (let an = 0; an < attrnames.length; an++)
+			to.setAttribute(attrnames[an],fr.getAttribute(attrnames[an]));
+	}
 }
