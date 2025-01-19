@@ -1,0 +1,43 @@
+th
+{
+	user-select: none;
+}
+
+div[component="Test"]
+{
+	width: 250px;
+	height: 250px;
+	margin-top: 8px;
+	margin-left: 8px;
+	position: relative;
+	border: solid 2px black;
+}
+
+div[name="Window-Header"]
+{
+	height: 24px;
+	position: relative;
+	border: solid 2px black;
+}
+
+div[component="Window"]
+{
+	resize: both;
+	position: relative;
+	border: solid 2px black;
+	background-color: lightcyan;
+
+	width: 300px;
+	height: 400px;
+	overflow: auto;
+}
+
+div[name="Container"]
+{
+	width: 700px;
+	height:700px;
+	margin-top: 24px;
+	margin-left: 24px;
+	position: relative;
+	border: solid 2px black;
+}

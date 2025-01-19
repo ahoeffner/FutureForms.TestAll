@@ -1,7 +1,7 @@
 import { TestForm } from './forms/TestForm';
 import { CustomInput } from './tags/CustomInput';
 import { TestWindow } from './windows/TestWindow';
-import { Components, FormsModule, Parser, Properties, TagLibrary } from 'futureforms';
+import { BusinessEvents, Components, FormEventFilter, FormsModule, Parser, TagLibrary } from 'futureforms';
 
 
 export class Application
@@ -10,10 +10,13 @@ export class Application
    {
       TagLibrary.addCustomTag(CustomInput);
 
-      Components.register("test",TestForm);
-		Components.register("window",TestWindow)
+      Components.bind("test",TestForm);
+		Components.bind("window",TestWindow);
 
       FormsModule.initialize();
-      new Parser().parse();
+      await new Parser().parse();
+
+		BusinessEvents.register(TestForm.instances[0]);
+		let xx:FormEventFilter = new FormEventFilter("input","test","block","field");
    }
 }

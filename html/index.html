@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./styles.css">
+	</head>
+   <body>
+		<div name="Container">
+			<div component="Window">
+				<div name="Window-Header" windowhandle="true">
+					Hello
+				</div>
+				<button execute="click => this.test('alex')">Test I</button>
+				<form component="Test" id="1">
+					<table>
+						<thead>
+							<tr>
+								<!--<th></th>-->
+								<th>Code</th>
+								<th>Country</th>
+								<th>Check</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row" foreach="row in 0..4">
+								<!--
+								<td class="indicator"><span from="CountryDS" row="$row" type="row-indicator"></span></td>
+								-->
+								<td><custom-input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
+								<td><custom-input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
+								<td><input type="checkbox" name="check" from="CountryDS" row="$row" value="X" advquery="false"></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+
+		<form component="Test" id="3">
+			<table>
+				<thead>
+					<tr>
+						<!--<th></th>-->
+						<th>Code</th>
+						<th>Country</th>
+						<th>Check</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="row" foreach="row in 0..2">
+						<!--
+						<td class="indicator"><span from="CountryDS" row="$row" type="row-indicator"></span></td>
+						-->
+						<td><custom-input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
+						<td><custom-input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
+						<td><input type="checkbox" name="check" from="CountryDS" row="$row" value="X" advquery="false"></td>
+					</tr>
+				</tbody>
+			</table>
+
+
+      <script src="app.js"></script>
+   </body>
+</html>
