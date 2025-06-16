@@ -14,19 +14,14 @@
 						<thead>
 							<tr>
 								<!--<th></th>-->
-								<th>Code</th>
-								<th>Country</th>
-								<th>Check</th>
+								<th>First name</th>
+								<th>Last name</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr class="row" foreach="row in 0..4">
-								<!--
-								<td class="indicator"><span from="CountryDS" row="$row" type="row-indicator"></span></td>
-								-->
-								<td><custom-input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
-								<td><custom-input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
-								<td><input type="checkbox" name="check" from="CountryDS" row="$row" value="X" advquery="false"></td>
+								<td><custom-input name="first_name" source="Employees" row="$row" size="10" maxlength="10" required autocomplete="name"></td>
+								<td><custom-input name="last_name"  source="Employees" row="$row" size="10" maxlength="10" required advquery="false" autocomplete="name"></td>
 							</tr>
 						</tbody>
 					</table>
@@ -49,9 +44,9 @@
 						<!--
 						<td class="indicator"><span from="CountryDS" row="$row" type="row-indicator"></span></td>
 						-->
-						<td><custom-input name="country_id" from="CountryDS" row="$row" size="4" maxlength="3" upper required></td>
-						<td><custom-input name="country_name" from="CountryDS" row="$row" initcap required advquery="false"></td>
-						<td><input type="checkbox" name="check" from="CountryDS" row="$row" value="X" advquery="false"></td>
+						<td><custom-input name="country_id" source="CountryDS" row="$row" size="4" maxlength="3" upper required autocomplete="name"></td>
+						<td><custom-input name="country_name" source="CountryDS" row="$row" initcap required advquery="false" autocomplete="name"></td>
+						<td><input type="checkbox" name="check" source="CountryDS" row="$row" value="X" advquery="false" readonly></td>
 					</tr>
 				</tbody>
 			</table>

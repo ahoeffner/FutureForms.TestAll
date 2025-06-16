@@ -27,7 +27,7 @@ div[component="Window"]
 	border: solid 2px black;
 	background-color: lightcyan;
 
-	width: 300px;
+	width: 600px;
 	height: 400px;
 	overflow: auto;
 }
